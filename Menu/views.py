@@ -16,11 +16,11 @@ class HomeView(View):
 class ShopCategoryView(View):
     """Shop Page"""
     context = {
-        'segment': 'shop'
+        'segment': 'shop_category'
     }
 
     def get(self, request):
-        return render(request, 'site/shop/shopcategory.html')
+        return render(request, 'site/shop_category/shopcategory.html')
 
 
 class BlogView(View):
