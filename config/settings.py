@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'CarsStore',
+        'NAME': 'car_store_db',
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
