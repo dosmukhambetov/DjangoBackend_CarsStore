@@ -137,6 +137,6 @@ class ClientContact(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Client Contact'
-        verbose_name_plural = 'Client Contacts'
+        verbose_name = 'ClientContact'
+        verbose_name_plural = 'ClientContacts'
         db_table = 'client_contact'

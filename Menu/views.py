@@ -37,11 +37,11 @@ class BlogView(View):
 class PagesView(View):
     """Pages Page"""
     context = {
-        'segment': 'pages'
+        'segment': 'login'
     }
 
     def get(self, request):
-        return render(request, 'site/pages/pages.html')
+        return render(request, 'site/login/login.html')
 
 
 class ContactView(View):
@@ -63,3 +63,75 @@ class ContactView(View):
         contact.save()
 
         return render(request, 'site/contact/contact.html')
+
+
+class SingleProduct(View):
+    context = {
+        'segment': 'single_product'
+    }
+
+    def get(self, request):
+        return render(request, 'site/single_product/single_product.html')
+
+
+class Checkout(View):
+    context = {
+        'segment': 'checkout'
+    }
+
+    def get(self, request):
+        return render(request, 'site/checkout/checkout.html')
+
+
+class Cart(View):
+    context = {
+        'segment': 'cart'
+    }
+
+    def get(self, request):
+        return render(request, 'site/cart/cart.html')
+
+
+class Confirmation(View):
+    context = {
+        'segment': 'confirmation'
+    }
+
+    def get(self, request):
+        return render(request, 'site/confirmation/confirmation.html')
+
+
+class SingleBlog(View):
+    context = {
+        'segment': 'single_blog'
+    }
+
+    def get(self, request):
+        return render(request, 'site/single_blog/single_blog.html')
+
+
+class Login(View):
+    context = {
+        'segment': 'login'
+    }
+
+    def get(self, request):
+        return render(request, 'site/login/login.html')
+
+
+class Tracking(View):
+    context = {
+        'segment': 'tracking'
+    }
+
+    def get(self, request):
+        return render(request, 'site/tracking/tracking.html')
+
+
+class Elements(View):
+    context = {
+        'segment': 'elements'
+    }
+
+    def get(self, request):
+        return render(request, 'site/elements/elements.html')
