@@ -124,3 +124,19 @@ class CarSeller(models.Model):
         verbose_name = 'Car and Seller'
         verbose_name_plural = 'Cars and Sellers'
         db_table = 'carseller'
+
+
+class ClientContact(models.Model):
+    """Contact form"""
+    name = models.CharField('Name', max_length=100)
+    email = models.CharField('Email', max_length=255)
+    subject = models.CharField('Subject', max_length=255, blank=True)
+    message = models.TextField('Text', null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Client Contact'
+        verbose_name_plural = 'Client Contacts'
+        db_table = 'client_contact'

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import View
+from Menu.models import ClientContact
 
 
 # Create your views here.
@@ -50,4 +51,15 @@ class ContactView(View):
     }
 
     def get(self, request):
+        return render(request, 'site/contact/contact.html')
+
+    def post(self, request):
+        email = request.POST['email']
+        name = request.POST['name']
+        subject = request.POST['subject']
+        message = request.POST['message']
+
+        contact = ClientContact(email=email, name=name, subject=subject, message=message)
+        contact.save()
+
         return render(request, 'site/contact/contact.html')
